@@ -1,10 +1,15 @@
 {
-  "name": "express-workshop",
+  "name": "express-workshop-2023-1",
   "version": "1.0.0",
-  "description": "An API REST using express.js",
+  "description": "This is a prohect for the node.js workshop",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yauma9/express_workshop-2023-1"
   },
   "keywords": [
     "api",
@@ -14,7 +19,12 @@
   ],
   "author": "Pablo QA",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yauma9/express_workshop-2023-1/issues"
+  },
+  "homepage": "https://github.com/Yauma9/express_workshop-2023-1#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
   }
 }
