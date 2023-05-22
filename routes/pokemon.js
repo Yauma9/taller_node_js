@@ -7,7 +7,7 @@ pokemon.post("/", async (req, res, next) => {
 
     if(pok_name && pok_height && pok_weight && pok_base_experience) {
         let query = "INSERT INTO pokemon(pok_name, pok_height, pok_weight, pok_base_experience)";
-        query +=  VALUES ('${pok_name}', ${pok_height}, ${pok_weight}, ${pok_base_experience});
+        query += ` VALUES ('${pok_name}', ${pok_height}, ${pok_weight}, ${pok_base_experience})`;
     
         const rows = await db.query(query);
         
@@ -21,7 +21,7 @@ pokemon.post("/", async (req, res, next) => {
 
 pokemon.delete("/:id([0-9]{1,3})", async (req, res, next) => {
     const query = `DELETE FROM pokemon WHERE  pok_id=${req.params.id}`;
-    const rows = await db.query(query):
+    const rows = await db.query(query);
 
     if (rows.affectedRows == 1) {
             return res.status(200).json({ code: 200, messae: "Pokemon borrado correctamente"});
