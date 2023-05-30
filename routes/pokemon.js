@@ -47,7 +47,7 @@ pokemon.put("/:id([0-9]{1,3})", async (req, res, next) => {
     
 });
 
-pokemon.put("/:id([0-9]{1,3})", async (req, res, next) => {
+pokemon.patch("/:id([0-9]{1,3})", async (req, res, next) => {
    
     if (req.body.pok_name) {
         let query = `UPDATE pokemon SET pok_name=${req.body.pok_name} WHERE pok_id=${req.params.id};`;
