@@ -34,8 +34,8 @@ empleado.put("/:id([0-9]{1,3})", async (req, res, next) => {
     const { nombre, apellidos, telefono, correo, direccion } = req.body;
 
     if(nombre && apellidos && telefono && correo && direccion) {
-        let query = `UPDATE empleados SET nombre=${nombre},apellidos=${apellidos},
-        telefono=${telefono},correo=${correo},direccion=${direccion} WHERE id_empleado=${req.params.id};`;
+        let query = `UPDATE empleados SET nombre='${nombre}',apellidos='${apellidos}',
+        telefono='${telefono}',correo='${correo}',direccion='${direccion}' WHERE id_empleado=${req.params.id};`;
     
         const rows = await db.query(query);
         
@@ -51,7 +51,7 @@ empleado.put("/:id([0-9]{1,3})", async (req, res, next) => {
 empleado.patch("/:id([0-9]{1,3})", async (req, res, next) => {
    
     if (req.body.nombre) {
-        let query = `UPDATE empleados SET nombre=${req.body.nombre} WHERE id_empleado=${req.params.id};`;
+        let query = `UPDATE empleados SET nombre='${req.body.nombre}' WHERE id_empleado=${req.params.id};`;
         const rows = await db.query(query);
         
         if(rows.affectedRows == 1) {
@@ -79,8 +79,8 @@ empleado.get('/:id([0-9]{1,3})', async (req, res, next) => {
 empleado.get('/:name([A-Za-z]+)', async (req, res, next) => {
     const name = req.params.name;
 
-    const pkmn = await db.query("SELECT * FROM empleados WHERE id_empleado="+name+";");
-    if (pkmn. length > 0) {
+    const pkmn = await db.query(`SELECT * FROM empleados WHERE nombre='${name}'`);
+    if (name.length > 0) {
         return res.status(200).json(pkmn);
     }
         return res.status(404).send({ code: 404, message: "Empleado no encontrado"});

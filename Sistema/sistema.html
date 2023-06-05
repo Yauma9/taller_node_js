@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Taller NodeJS</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="./js/sistema.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
-    <style>
-        table, th, td {
-          border: 1px solid;
-          text-align: center;
-          padding: 15px;
+      <style>
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
         }
-        </style>
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+        background-color: #111;
+        }   
+
+        .active {
+        background-color: #1b2366;
+        }
+
+        table, td, th {
+        border: 1px solid black;
+        }
+
+        td, th {
+        width:100px;
+        }
+
+        table {
+        /*border-collapse: collapse;*/
+        width: 100%;
+        }
+
+        td {
+        text-align: center;
+        }
+      </style>
 </head>
 <body>
-   <h1>Bienvenido al Sistema Taller NodeJS</h1> 
-   <button onclick="window.location.href='./insertar.html';">
-    Agregar Empleado
-  </button> 
-  <button onclick="window.location.href='./modificar.html';">
-    Modificar Tabla
-  </button> 
+
+<ul>
+  <li><a class="active" href='./insertar.html'>Insertar</a></li>
+  <li><a href='./modificar.html'>Modificar</a></li>
+  <li><a href='./eliminar.html'>Eliminar</a></li>
+  <li><a href='./busqueda.html'>Busqueda</a></li>
+</ul>
+
 </body>
 </html>

@@ -7,8 +7,8 @@ function init() {
         window.location.href = "sistema.html"
     });
 
-    document.querySelector('.btn-primary').addEventListener('click', insert);       
-}
+    document.querySelector('.btn-primary').addEventListener('click', insert); 
+    }      
 
 function insert() {
     var nombre = document.getElementById('input-name').value;
@@ -19,7 +19,7 @@ function insert() {
 
     axios({
         method: 'post',
-        url: 'http://localhost:3000/sistema/',
+        url: 'http://localhost:3000/sistema/', 
         data: {
             nombre:nombre,
             apellidos:apellidos,

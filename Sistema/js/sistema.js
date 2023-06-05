@@ -28,7 +28,9 @@ function loadEmpleados() {
 
 function displayEmpleados(empleados) {
     var body = document.querySelector("body");
-    body.innerHTML += `<table>
+    body.innerHTML += `
+
+    <table>
     <tr>
       <th>Nombre</th>
       <th>Apellidos</th>
@@ -40,7 +42,7 @@ function displayEmpleados(empleados) {
 
 
         body.innerHTML +=  
-        `
+        `<table>
         <tr>
         <h3>
           <td>${empleados[i].nombre}</td>
@@ -54,4 +56,3 @@ function displayEmpleados(empleados) {
     } 
     body.innerHTML +=  `</table>`; 
 }
-
