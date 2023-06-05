@@ -1,7 +1,7 @@
 {
   "name": "taller_node_js",
   "version": "1.0.0",
-  "description": "This is a final project for the node.js workshop",
+  "description": "This is the final project for the node.js workshop",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index",

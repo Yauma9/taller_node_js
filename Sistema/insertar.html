@@ -5,41 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro</title>
+    <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
-    <script src="./js/signin.js"></script>   
+    <script src="./js/insertar.js"></script>   
 </head>
 
 <body>
     <div class="container">
         <div class="row mt-5">
             <div class="col-6 offset-3">
-                <h1>Registro</h1>
+                <h1>Insertar datos</h1>
             </div>
         </div>
         <div class="row align-items-center">
             <div class="col-6 offset-3">
+                <div class="form-group">
+                    <label for="input-mail">Nombre</label>
+                    <input type="text" class="form-control" id="input-name" placeholder="Juan">
+                    <small class="form-text text-muted">Nombre.</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-mail">Apellidos</label>
+                    <input type="text" class="form-control" id="input-surname" placeholder="Pérez">
+                    <small class="form-text text-muted">Apellido.</small>
+                </div>
+                <div class="form-group">
+                    <label for="input-mail">Telefono</label>
+                    <input type="text" class="form-control" id="input-phone" placeholder="1234567890">
+                    <small class="form-text text-muted">Telefono</small>
+                </div>
                 <div class="form-group">
                     <label for="input-mail">Correo electrónico</label>
                     <input type="email" class="form-control" id="input-mail" placeholder="correo@dominio.ext">
                     <small class="form-text text-muted">Un correo para registrarte.</small>
                 </div>
                 <div class="form-group">
-                    <label for="input-mail">Nombre</label>
-                    <input type="text" class="form-control" id="input-name" placeholder="Juan Pérez">
-                    <small class="form-text text-muted">Tu nombre.</small>
-                </div>
-                <div class="form-group">
-                    <label for="input-password">Contraseña</label>
-                    <input type="password" class="form-control" id="input-password" placeholder="***********">
+                    <label for="input-mail">Direccion</label>
+                    <input type="text" class="form-control" id="input-address" placeholder="Casa">
+                    <small class="form-text text-muted">Direccion</small>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <button class="btn btn-primary">Registrarme</button>
-                    <button class="btn btn-secondary">Iniciar sesión</button>
+                    <button class="btn btn-primary">Insertar</button>
+                    <button class="btn btn-secondary">Regresar</button>
                 </div>
             </div>
         </div>
