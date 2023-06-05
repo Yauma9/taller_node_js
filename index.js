@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const express = require('express');
 const app = express();
 //Routers
-const pokemon = require('./routes/pokemon');
+const sistema = require('./routes/sistema');
 const user = require('./routes/user');
 //Middleware
 const auth = require('./middleware/auth');
@@ -23,7 +23,7 @@ app.use("/user", user);
 app.use(auth);
 
 
-app.use("/pokemon", pokemon);
+app.use("/sistema", sistema);
 app.use(notFound);
 
 app.listen(process.env.PORT || 3000, () => {
